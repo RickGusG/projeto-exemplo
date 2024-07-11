@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const Row = styled.div`
+export const Row = styled.div<{gap?: number}>`
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  gap: ${({gap}) => gap || '16'}px;
   margin-top: 16px;
 `
